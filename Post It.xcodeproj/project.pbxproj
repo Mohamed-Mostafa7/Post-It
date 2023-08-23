@@ -17,6 +17,8 @@
 		E9BDD8D42A9663C10052573E /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BDD8D22A9663C10052573E /* PostsViewController.xib */; };
 		E9BDD8D92A9669120052573E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDD8D72A9669120052573E /* PostTableViewCell.swift */; };
 		E9BDD8DA2A9669120052573E /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9BDD8D82A9669120052573E /* PostTableViewCell.xib */; };
+		E9BDD8DD2A9674580052573E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDD8DC2A9674580052573E /* Post.swift */; };
+		E9BDD8E02A96759E0052573E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDD8DF2A96759E0052573E /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E9BDD8D22A9663C10052573E /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
 		E9BDD8D72A9669120052573E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		E9BDD8D82A9669120052573E /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		E9BDD8DC2A9674580052573E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E9BDD8DF2A96759E0052573E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				E99B3B0D2A964E000069BCA1 /* SceneDelegate.swift */,
 				E94FFF272A96578800356159 /* Home */,
 				E9BDD8D02A96629C0052573E /* Posts */,
+				E9BDD8DE2A9675500052573E /* HelpingFiles */,
 				E99B3B142A964E040069BCA1 /* Assets.xcassets */,
 				E99B3B162A964E040069BCA1 /* LaunchScreen.storyboard */,
 				E99B3B192A964E040069BCA1 /* Info.plist */,
@@ -89,6 +94,7 @@
 			children = (
 				E9BDD8D12A9663C10052573E /* PostsViewController.swift */,
 				E9BDD8D52A9668BF0052573E /* View */,
+				E9BDD8DB2A9673E80052573E /* Model */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -109,6 +115,22 @@
 				E9BDD8D82A9669120052573E /* PostTableViewCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		E9BDD8DB2A9673E80052573E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDD8DC2A9674580052573E /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9BDD8DE2A9675500052573E /* HelpingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDD8DF2A96759E0052573E /* APIManager.swift */,
+			);
+			path = HelpingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +209,10 @@
 				E9BDD8D32A9663C10052573E /* PostsViewController.swift in Sources */,
 				E99B3B0C2A964E000069BCA1 /* AppDelegate.swift in Sources */,
 				E9BDD8D92A9669120052573E /* PostTableViewCell.swift in Sources */,
+				E9BDD8DD2A9674580052573E /* Post.swift in Sources */,
 				E99B3B0E2A964E000069BCA1 /* SceneDelegate.swift in Sources */,
 				E94FFF252A96522600356159 /* HomeViewController.swift in Sources */,
+				E9BDD8E02A96759E0052573E /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

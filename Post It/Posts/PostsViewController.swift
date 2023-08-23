@@ -8,6 +8,8 @@
 import UIKit
 
 class PostsViewController: UIViewController {
+    
+    var posts = [Post]()
 
     @IBOutlet weak var postsTableView: UITableView!
     
@@ -20,9 +22,23 @@ class PostsViewController: UIViewController {
         postsTableView.delegate = self
         postsTableView.dataSource = self
         
+        getPosts()
+        
     }
-
-
+    
+    func getPosts(){
+        APIManager.shared.fetchPosts { response in
+            switch response {
+            case .success(let posts):
+                self.posts = posts
+                DispatchQueue.main.async {
+                    self.postsTableView.reloadData()
+                }
+            case.failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 // MARK: - TableView delegate
@@ -35,12 +51,12 @@ extension PostsViewController: UITableViewDelegate {
 // MARK: - TableView dataSource
 extension PostsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell
-        cell?.configureCell()
+        cell?.configureCell(title: posts[indexPath.row].title ?? "Empty", ImageURL: "image")
         return cell ?? UITableViewCell()
     }
     
