@@ -13,6 +13,9 @@ class PostsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        postsTableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
+        
         title = "Posts"
         postsTableView.delegate = self
         postsTableView.dataSource = self
@@ -36,7 +39,9 @@ extension PostsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell
+        cell?.configureCell()
+        return cell ?? UITableViewCell()
     }
     
     
