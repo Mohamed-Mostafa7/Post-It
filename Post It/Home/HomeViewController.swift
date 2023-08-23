@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func allPostsButtonTapped(_ sender: UIButton) {
         print("Show all posts")
+        let vc = PostsViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func createPostButtonTapped(_ sender: UIButton) {
