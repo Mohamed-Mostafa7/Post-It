@@ -56,7 +56,7 @@ extension PostsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell
-        cell?.configureCell(title: posts[indexPath.row].title ?? "Empty", ImageURL: "image")
+        cell?.configureCell(title: posts[indexPath.row].title ?? "Empty", ImageURL: posts[indexPath.row].imageURL ?? "" )
         return cell ?? UITableViewCell()
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
     
@@ -36,28 +37,28 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func getImage(urlString: String) {
-//        let url = URL(string: urlString)
-//        let processor = DownsamplingImageProcessor(size: postImageView.bounds.size)
-//                     |> RoundCornerImageProcessor(cornerRadius: 20)
-//        postImageView.kf.indicatorType = .activity
-//        postImageView.kf.setImage(
-//            with: url,
-//            placeholder: UIImage(systemName: "photo"),
-//            options: [
-//                .processor(processor),
-//                .scaleFactor(UIScreen.main.scale),
-//                .transition(.fade(1)),
-//                .cacheOriginalImage
-//            ])
-//        {
-//            result in
-//            switch result {
-//            case .success(let value):
-//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-//            case .failure(let error):
-//                print("Job failed: \(error.localizedDescription)")
-//            }
-//        }
+        let url = URL(string: urlString)
+        let processor = DownsamplingImageProcessor(size: postImageView.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        postImageView.kf.indicatorType = .activity
+        postImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(systemName: "photo"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
     
 }
