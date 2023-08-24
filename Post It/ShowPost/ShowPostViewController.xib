@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPostViewController" customModule="Post_It" customModuleProvider="target">
+            <connections>
+                <outlet property="PostTitle" destination="NIB-DY-7pr" id="b2t-nr-0ZV"/>
+                <outlet property="PostmessageTextView" destination="riH-G5-gCr" id="bLR-Uo-M0r"/>
+                <outlet property="postImageView" destination="gKc-vj-BdN" id="bA8-q4-cGS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-vj-BdN">
+                    <rect key="frame" x="20" y="68.999999999999986" width="353" height="255.66666666666663"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-DY-7pr">
+                    <rect key="frame" x="20" y="344.66666666666669" width="353" height="44"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="riH-G5-gCr">
+                    <rect key="frame" x="20" y="408.66666666666669" width="353" height="234.33333333333331"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-NO-lhq">
+                    <rect key="frame" x="20" y="663" width="353" height="55"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="hXz-mq-AK0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Update">
+                        <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="UpdateButtonTaped:" destination="-1" eventType="touchUpInside" id="xHM-Wy-Kux"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctf-Z6-fp7">
+                    <rect key="frame" x="20" y="738" width="353" height="60"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="i1o-wf-aWn"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Delete">
+                        <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="DeleteButtonTapped:" destination="-1" eventType="touchUpInside" id="69v-nL-773"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="riH-G5-gCr" firstAttribute="top" secondItem="NIB-DY-7pr" secondAttribute="bottom" constant="20" id="2P7-4g-7q7"/>
+                <constraint firstItem="Ctf-Z6-fp7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3tA-X2-p9w"/>
+                <constraint firstItem="riH-G5-gCr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hp2-HL-8bp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NIB-DY-7pr" secondAttribute="trailing" constant="20" id="MFZ-U7-fgX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="riH-G5-gCr" secondAttribute="trailing" constant="20" id="NAC-FU-DPz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gKc-vj-BdN" secondAttribute="trailing" constant="20" id="PB6-U4-XP6"/>
+                <constraint firstItem="gKc-vj-BdN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VMF-ht-XCI"/>
+                <constraint firstItem="gKc-vj-BdN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="aPA-bV-d4L"/>
+                <constraint firstItem="gKc-vj-BdN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="cEl-UH-hjT"/>
+                <constraint firstItem="NIB-DY-7pr" firstAttribute="top" secondItem="gKc-vj-BdN" secondAttribute="bottom" constant="20" id="ekN-92-Iw3"/>
+                <constraint firstItem="6TH-NO-lhq" firstAttribute="top" secondItem="riH-G5-gCr" secondAttribute="bottom" constant="20" id="f8T-YS-4N3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ctf-Z6-fp7" secondAttribute="trailing" constant="20" id="gHs-Hg-3h9"/>
+                <constraint firstItem="6TH-NO-lhq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mZ5-0r-V48"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6TH-NO-lhq" secondAttribute="trailing" constant="20" id="rd4-ye-EgG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ctf-Z6-fp7" secondAttribute="bottom" constant="20" id="rso-Qz-0GB"/>
+                <constraint firstItem="NIB-DY-7pr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sR4-Ei-J1N"/>
+                <constraint firstItem="Ctf-Z6-fp7" firstAttribute="top" secondItem="6TH-NO-lhq" secondAttribute="bottom" constant="20" id="ujb-Nj-Fk3"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

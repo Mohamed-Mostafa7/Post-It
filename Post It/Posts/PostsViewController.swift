@@ -45,6 +45,9 @@ class PostsViewController: UIViewController {
 extension PostsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         postsTableView.deselectRow(at: indexPath, animated: true)
+        let vc = ShowPostViewController()
+        vc.post = posts[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
