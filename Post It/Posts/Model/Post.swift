@@ -16,6 +16,7 @@ struct Post: Codable {
     
     
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case title = "post_title"
         case message = "post_message"
         case imageURL = "post_image"

@@ -30,9 +30,21 @@ class ShowPostViewController: UIViewController {
     }
     
     @IBAction func UpdateButtonTaped(_ sender: UIButton) {
+        
     }
     
     @IBAction func DeleteButtonTapped(_ sender: UIButton) {
+        let urlString = "https://task.astra-tech.net/fronendtask/public/api/deletepost?id=\(post?.id ?? 0)"
+        
+        APIManager.shared.deletePost(urlString: urlString, parameters: [:]) { _, _, error in
+            if let error = error {
+                print(error)
+            } else {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
     }
     
     func getImage(urlString: String) {
